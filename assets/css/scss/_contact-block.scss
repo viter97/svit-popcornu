@@ -1,0 +1,51 @@
+.contact-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+
+  &--tel,
+  &--mail {
+    padding-left: 8px;
+  }
+
+  &--address,
+  &--mail {
+    align-items: center;
+  }
+
+  &--mail {
+    align-items: center;
+    a{
+      margin-top: -2px;
+    }
+  }
+
+  &__icon {
+    margin-right: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    &:hover,
+    &:active {
+      color: $color-grey-gold;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+}

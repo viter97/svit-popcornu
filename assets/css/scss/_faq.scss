@@ -1,0 +1,58 @@
+.faq {
+  position: relative;
+  padding: 20px 0 63px;
+  background: $color-white;
+  overflow: hidden;
+
+  &__heading {
+    margin: 0 0 14px;
+    color: $color-brown-1;
+  }
+
+  @media all and (min-width: $tablet-width) {
+    padding: 40px 0 120px;
+  }
+
+  @media all and (min-width: $tablet-big-width) {
+    padding: 60px 0 160px;
+
+    &__heading{
+      margin: 0 0 12px;
+    }
+
+    &::before,
+    &::after{
+      position: absolute;
+      display: block;
+      pointer-events: none;
+    }
+
+    &::before{
+      content: url("../img/bg-corn.svg");
+      left: -120px;
+      bottom: -250px;
+    }
+
+    &::after{
+      content: url("../img/bg-popcorn-single.svg");
+      right: 48px;
+      bottom: 58px;
+    }
+  }
+
+  @media all and (min-width: $desktop-big-width) {
+    padding: 97px 0 240px;
+
+    &::before{
+      content: url("../img/bg-corn.svg");
+      left: -98px;
+      bottom: -89px;
+    }
+
+    &::after{
+      content: url("../img/bg-popcorn-single.svg");
+      right: 66px;
+      bottom: 58px;
+    }
+  }
+}

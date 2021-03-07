@@ -1,0 +1,64 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__number {
+    margin-bottom: -3px;
+    font-family: $font-product-name;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-khaki-light
+  }
+
+  &__btn {
+    position: relative;
+    width: 26px;
+    height: 24px;
+    border: 1px solid $color-creamy;
+    margin: 0 7px;
+    background: transparent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 16px;
+      height: 2px;
+      border-radius: 10px;
+    }
+
+    &::after{
+      width: 2px;
+      height: 16px;
+    }
+
+    &--minus {
+      &::before {
+        background: $color-creamy;
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &--plus {
+      border-color: $color-khaki-light;
+      background: $color-khaki-light;
+
+      &::before,
+      &::after {
+        background: $color-white;
+      }
+    }
+  }
+}

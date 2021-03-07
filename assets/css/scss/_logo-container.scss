@@ -1,0 +1,17 @@
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo {
+
+  &--secondary {
+    padding-top: 1px;
+    margin-left: 18px;
+  }
+
+  img {
+    display: block;
+  }
+}

@@ -1,0 +1,167 @@
+.accordion__container {
+  width: 100%;
+  max-width: 360px;
+  margin: 16px auto 0 auto;
+  color: $color-khaki-light;
+}
+
+.accordion__container label {
+  position: relative;
+  display: block;
+  padding: 8px 0 13px;
+  font-size: $font-size-accordion;
+  line-height: $line-height-big;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition-base;
+  z-index: 20;
+}
+
+.accordion__container label:hover,
+.accordion__container label:active {
+  color: $color-grey-gold;
+}
+
+.accordion__container label:after,
+.accordion__container label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  background: $color-grey-gold;
+}
+
+.accordion__container label:after {
+  top: calc(50% - 2px);
+  right: 0;
+  width: 15px;
+  height: 3px;
+}
+
+.accordion__container label:before {
+  top: calc(50% - 8px);
+  right: 6px;
+  width: 3px;
+  height: 15px;
+  transition: $transition-base;
+}
+
+.accordion__container input:checked + label:before {
+  transform: rotate(-90deg);
+}
+
+.accordion__container input:checked + label:hover:after {
+  background-image: url('../images/arrow_up.png');
+}
+
+.accordion__container input {
+  display: none;
+}
+
+.accordion__container article {
+  position: relative;
+  height: 0;
+  margin-top: -3px;
+  border-bottom: none;
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 135%;
+  z-index: 10;
+  transition: height 0.3s ease-in-out; //згортання
+}
+
+.accordion__container article p {
+  margin: 0;
+}
+
+.accordion__container input:checked ~ article {
+  transition: height 0.3s ease-in-out; //розгортання
+}
+
+.accordion__container input:checked ~ article.accordion--small {
+  height: 60px;
+}
+
+.accordion__container input:checked ~ article.accordion--medium {
+  height: 100px;
+}
+
+.accordion__container input:checked ~ article.accordion--large {
+  height: 140px;
+}
+
+@media all and (min-width: $mobile-iphone-x-width) {
+  .accordion__container label:after {
+    right: 37px;
+  }
+  .accordion__container label:before {
+    right: 43px;
+  }
+}
+
+@media all and (min-width: $mobile-big-width) {
+  .accordion__container label:after {
+    right: 0;
+  }
+  .accordion__container label:before {
+    right: 6px;
+  }
+}
+
+@media all and (min-width: $tablet-width) {
+  .accordion__container {
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+  }
+  .accordion__container label:after {
+    right: 0;
+  }
+  .accordion__container label:before {
+    right: 6px;
+  }
+}
+
+@media all and (min-width: $tablet-big-width) {
+  .accordion__container {
+    max-width: 860px;
+    padding-left: 40px;
+    margin: 40px auto 0 auto;
+    column-count: 2;
+    column-gap: 78px;
+
+    .accordion {
+      max-height: none;
+      height: auto;
+      padding-bottom: 20px;
+    }
+
+    label {
+      padding: 0 0 12px;
+      cursor: auto;
+
+      br {
+        display: none;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-khaki-light;
+      }
+
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+
+    p {
+      max-width: 330px;
+    }
+  }
+}
+
+@media all and (min-width: $tablet-big-width) {
+  .accordion__container {
+    margin: 80px auto 0 auto;
+  }
+}

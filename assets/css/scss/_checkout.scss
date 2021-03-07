@@ -1,0 +1,125 @@
+.checkout {
+  display: none;
+  width: 90%;
+  max-width: 770px;
+  padding: 47px 15px 32px;
+  background: $color-grey-white;
+  border-radius: $border-radius-base;
+  background-repeat: no-repeat;
+  background-size: 513px;
+  background-position-x: -20px;
+  background-position-y: 127px;
+
+  .fancybox-button {
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    filter: $filter-dark-gold;
+    opacity: 1;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__go-back {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border: none;
+    background: none;
+  }
+
+  &__heading {
+    display: inline-block;
+    padding: 8px 30px 3px;
+    margin: 0 auto 29px;
+    text-align: center;
+    font-family: $font-product-name;
+    font-weight: 600;
+    font-size: $font-size-medium;
+    line-height: $line-height-big;
+    background: $color-creamy;
+    text-transform: uppercase;
+    color: $color-khaki-light;
+    border-radius: 10px;
+
+    span {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  .checkout__table {
+    width: 90%;
+    max-width: 360px;
+    margin-bottom: 25px;
+    line-height: 1;
+    color: $color-khaki-light;
+
+    td {
+      padding: 20px 0;
+
+      &:nth-child(2) {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &__counter {
+    justify-content: flex-end;
+  }
+
+  &__size {
+    display: block;
+    padding-top: 10px;
+    font-family: $font-product-name;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__weight {
+    display: block;
+    font-family: $font-decorative-1;
+    text-transform: capitalize;
+  }
+
+  &__price {
+    display: block;
+    padding-top: 4px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+
+  .checkout__form {
+    width: 100%;
+    max-width: 334px;
+  }
+
+  .checkout__final-price {
+    text-align: right;
+    width: 100%;
+    max-width: 572px;
+    padding: 5px 20px;
+    border-top: 1px solid $color-khaki-light;
+    margin-bottom: 21px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: $line-height-big;
+    color: $color-khaki-light;
+  }
+
+
+  @media all and (min-width: $mobile-medium-width) {
+    &__heading {
+      min-width: 288px;
+      font-size: $font-size-big;
+    }
+  }
+}

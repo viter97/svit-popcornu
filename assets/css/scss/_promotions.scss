@@ -1,0 +1,101 @@
+.promotions {
+  padding: 0 0 104px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 8%;
+  background-position-x: 50%;
+  text-align: center;
+
+  &__supheading {
+    font-size: 24px;
+    font-family: $font-decorative-1;
+    line-height: $line-height-big;
+    margin: 41px 0 8px;
+    color: $color-khaki-light;
+  }
+
+  &__heading {
+    margin: 0 0 24px;
+    font-size: 37px;
+    line-height: 135%;
+    color: $color-brown-1;
+  }
+
+  &__img-container {
+    position: relative;
+    margin-bottom: 22px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 305px;
+    }
+  }
+
+  &__info {
+    max-width: 300px;
+    font-weight: 600;
+    line-height: 161.4%;
+    color: $color-brown-1;
+    opacity: 0.8;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media all and (min-width: $desktop-width) {
+    position: relative;
+    padding: 30px 0 84px;
+    margin-bottom: -20px;
+    z-index: 60;
+    background-position-y: 11%;
+    background-position-x: 52%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -45px;
+      bottom: 0;
+      display: block;
+      pointer-events: none;
+      background-image: url('../img/bg-popcorn-3.svg');
+      background-repeat: no-repeat;
+      background-position-x: 26px;
+    }
+
+
+    .swiper-container {
+      margin: auto;
+      max-width: 1100px;
+    }
+
+    &__img-container {
+      display: flex;
+      align-items: center;
+      height: 420px;
+      margin-bottom: 24px;
+
+      img {
+        max-height: none;
+      }
+    }
+
+    &__info {
+      max-width: 440px;
+      font-size: 21px;
+    }
+  }
+
+  @media all and (min-width: $desktop-bigger-width) {
+    &::before {
+      background-size: contain;
+      background-position-x: 0;
+    }
+  }
+}
+

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /><!-- minimum-scale=1 only for dev mode -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Balsamiq+Sans:wght@400;700&family=Lobster&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/flexslider/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>Світ попкорну</title>
+</head>
+<body class="resize-animation-stopper home">
+<header class="header">
+    <div class="container">
+
+        <!-- hamburger -->
+        <div class="hamburger hamburger--slider" id="header-hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+        <!-- end hamburger -->
+
+        <!-- logo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+            <a class="logo logo--secondary" href="index.html"><img src="assets/img/logo-secondary.svg" alt="secondary logo"></a>
+        </div>
+        <!-- end logo -->
+
+        <!-- nav-bar -->
+        <nav class="nav-bar" id="header-nav">
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item"><a href="#benefits">Переваги</a></li>
+                <li class="nav-bar__item"><a href="#assortment">Асортимент</a></li>
+                <li class="nav-bar__item"><a href="#reviews">Відгуки</a></li>
+                <li class="nav-bar__item"><a href="#promotions">Акції</a></li>
+            </ul>
+            <div class="social nav-bar__social">
+                <a class="social__icon" href="https://www.youtube.com"><img src="assets/img/icon-instagram.svg" alt="instagram"></a>
+                <a class="social__icon" href="https://www.facebook.com/"><img src="assets/img/icon-facebook.svg" alt="facebook"></a>
+            </div>
+        </nav>
+        <!-- end nav-bar -->
+
+        <div class="social">
+            <a class="social__icon" href="https://www.youtube.com"><img src="assets/img/icon-instagram.svg" alt="instagram"></a>
+            <a class="social__icon" href="https://www.facebook.com/"><img src="assets/img/icon-facebook.svg" alt="facebook"></a>
+        </div>
+
+        <!-- tel__container -->
+        <div class="contact-block contact-block--tel">
+            <div class="contact-block__icon">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="assets/img/icon-tel-white.svg">
+                    <source media="(min-width: 0px)" srcset="assets/img/icon-tel.svg">
+                    <img src="assets/img/icon-tel.svg"  alt="a head carved out of wood">
+                </picture>
+            </div>
+            <div class="contact-block__list">
+                <a class="contact-block__item" href="tel:380971170899">+ 38 (097) 117 08 99</a>
+                <a class="contact-block__item" href="tel:380631757254">+ 38 (063) 175 72 54</a>
+            </div>
+        </div>
+        <!-- end tel__container -->
+
+        <!-- shopping-cart -->
+        <a data-fancybox data-src="#hidden-content" href="javascript:;" class="shopping-cart-icon">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="assets/img/icon-shopping-cart-white.svg">
+                <source media="(min-width: 0px)" srcset="assets/img/icon-shopping-cart.svg">
+                <img src="assets/img/icon-shopping-cart.svg" alt="shopping cart">
+            </picture>
+            <span class="shopping-cart-icon__count">2</span>
+        </a>
+        <!-- shopping-cart -->
+
+        <!-- checkout -->
+        <div id="hidden-content" class="checkout" style="background-image: url('assets/img/bg-logo-transparent.svg')">
+            <div class="checkout__inner">
+                <button class="checkout__go-back"><img src="assets/img/checkout-arrow.svg" alt="arrow left"></button>
+                <h3 class="checkout__heading"><span>Ваше замовлення</span></h3>
+                <!-- checkout__table -->
+                <table class="checkout__table">
+                    <tbody>
+                    <tr>
+                        <td><img src="assets/img/checkout-product-1.png" alt="checkout-product-1"></td>
+                        <td>
+                            <span class="checkout__size">Малий</span>
+                            <span class="checkout__weight">170 г.</span>
+                            <span class="checkout__price">₴ 50</span>
+                        </td>
+                        <td>
+                            <div class="checkout__counter counter">
+                                <button class="counter__btn counter__btn--minus"></button>
+                                <span class="counter__number">2</span>
+                                <button class="counter__btn counter__btn--plus"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/img/checkout-product-2.png" alt="checkout-product-1"></td>
+                        <td>
+                            <span class="checkout__size">Середній</span>
+                            <span class="checkout__weight">230 г.</span>
+                            <span class="checkout__price">₴ 60</span>
+                        </td>
+                        <td>
+                            <div class="checkout__counter counter">
+                                <button class="counter__btn counter__btn--minus"></button>
+                                <span class="counter__number">1</span>
+                                <button class="counter__btn counter__btn--plus"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- checkout__table -->
+
+                <div class="checkout__final-price">
+                    <span>Сумма ₴ 160</span>
+                </div>
+
+                <!-- checkout__form -->
+                <form class="checkout__form">
+                    <!-- user-name -->
+                    <label for="user-name">Ваше Ім’я</label>
+                    <input type="text" name="user-name" id="user-name" required>
+                    <!-- user-tel -->
+                    <label for="user-tel">Номер Телефону</label>
+                    <input type="tel" name="user-tel" id="user-tel" required>
+                    <!-- user-email -->
+                    <label for="user-email">E-Mail</label>
+                    <input type="email" name="user-email" id="user-email" required>
+                    <!-- user-location -->
+                    <label for="user-location">Місто</label>
+                    <input type="text" name="user-location" id="user-location" required>
+
+                    <button type="submit" class="btn btn--submit">Оплатити</button>
+                </form>
+                <!-- end checkout__form -->
+            </div>
+        </div>
+        <!-- end checkout -->
+    </div>
+</header>
+<section class="hero">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-1.jpg')">
+                <div class="hero__inner">
+                    <div class="logo-container">
+                        <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+                        <a class="logo--secondary" href="index.html"><img src="assets/img/logo-secondary.svg" alt="secondary logo"></a>
+                    </div>
+                    <p class="hero__supheading">Шалено смачно</p>
+                    <h1 class="hero__heading">СвIт попкорну</h1>
+                    <div class="logo-divider">
+                        <img src="assets/img/logo.svg" alt="logo" width="20" height="20">
+                    </div>
+                    <p class="hero__subheading">Попкорн ручної роботи</p>
+                    <a href="#assortment" class="hero__btn btn">Перейти до асортименту</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-1.jpg')">
+                <div class="hero__inner">
+                    <div class="logo-container">
+                        <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+                        <a class="logo--secondary" href="index.html"><img src="assets/img/logo-secondary.svg" alt="secondary logo"></a>
+                    </div>
+                    <p class="hero__supheading">Шалено смачно</p>
+                    <h1 class="hero__heading">СвIт попкорну</h1>
+                    <div class="logo-divider">
+                        <img src="assets/img/logo.svg" alt="logo" width="20" height="20">
+                    </div>
+                    <p class="hero__subheading">Попкорн ручної роботи</p>
+                    <a href="#assortment" class="hero__btn btn">Перейти до асортименту</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-1.jpg')">
+                <div class="hero__inner">
+                    <div class="logo-container">
+                        <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+                        <a class="logo--secondary" href="index.html"><img src="assets/img/logo-secondary.svg" alt="secondary logo"></a>
+                    </div>
+                    <p class="hero__supheading">Шалено смачно</p>
+                    <h1 class="hero__heading">СвIт попкорну</h1>
+                    <div class="logo-divider">
+                        <img src="assets/img/logo.svg" alt="logo" width="20" height="20">
+                    </div>
+                    <p class="hero__subheading">Попкорн ручної роботи</p>
+                    <a href="#assortment" class="hero__btn btn">Перейти до асортименту</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <!-- If we need pagination -->
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"><img src="assets/img/icon-arrow.svg" alt="arrow"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"><img src="assets/img/icon-arrow.svg" alt="arrow"></div>
+        </div>
+    </div>
+</section>
+<section class="assortment" id="assortment" style="background-image: url('assets/img/bg-popcorn.svg')">
+    <p class="assortment__supheading">Популярне</p>
+    <h2 class="assortment__heading">Асортимент</h2>
+
+    <!-- assortment__main-slider -->
+    <div class="swiper-container product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-6.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-5.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-7.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-7.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-8.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-8.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-6.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-5.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-7.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-7.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-8.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-8.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-2.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-1.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-3.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-3.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-4.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-4.png" alt="product">
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-6.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-5.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-7.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-7.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-8.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-8.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+            <div class="swiper-slide">
+                <!-- assortment__inner-slider -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="assets/img/product-slider-6.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-5.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 3 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-7.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-7.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 1 л</p>
+                        </li>
+                        <li data-thumb="assets/img/product-slider-8.png">
+                            <div class="product-slider__image-container">
+                                <img class="product-slider__image" src="assets/img/product-slider-8.png" alt="product">
+                                <div class="badge badge--new"><span>new</span></div>
+                            </div>
+                            <p class="product-slider__supheading">Світ попкорну</p>
+                            <p class="product-slider__name">зі смаком шоколаду</p>
+                            <p class="product-slider__size">Маленький 6 л</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end assortment__inner-slider -->
+            </div>
+        </div>
+    </div>
+    <!-- assortment__main-slider -->
+
+</section>
+<section class="reviews" id="reviews">
+    <div class="lines-divider"></div>
+    <h2 class="reviews__heading">Шалено ПОПпулярнi коментарi</h2>
+    <div class="logo-divider">
+        <img src="assets/img/logo-black.svg" alt="logo" width="23" height="20">
+    </div>
+
+    <div class="reviews__slider">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="author">
+                            <img class="author__img" src="assets/img/review-author-1.jpg" alt="review-author-1">
+                            <div class="author__info">
+                                <p class="author__name">Марія Дудь</p>
+                                <p class="author__location">Україна, Львів</p>
+                            </div>
+                        </div>
+                        <div class="review__rating review__rating--4">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                        </div>
+                        <p class="review__text">Неймовірний попкорн, круте обслуговування та приємний персонал ставлю 5 зірок.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="author">
+                            <img class="author__img" src="assets/img/review-author-2.jpg" alt="review-author-1">
+                            <div class="author__info">
+                                <p class="author__name">Alex</p>
+                                <p class="author__location">Україна, Київ</p>
+                            </div>
+                        </div>
+                        <div class="review__rating review__rating--1">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                        </div>
+                        <p class="review__text">I like this popcorn very quality product and sweat. I reccomend !</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="author">
+                            <img class="author__img" src="assets/img/review-author-1.jpg" alt="review-author-1">
+                            <div class="author__info">
+                                <p class="author__name">Марія Дудь</p>
+                                <p class="author__location">Україна, Львів</p>
+                            </div>
+                        </div>
+                        <div class="review__rating review__rating--4">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                            <img src="assets/img/icon-star.svg" alt="star">
+                        </div>
+                        <p class="review__text">Неймовірний попкорн, круте обслуговування та приємний персонал ставлю 5 зірок.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"><img src="assets/img/icon-arrow-square.svg" alt="arrow"></div>
+        <div class="swiper-button-next"><img src="assets/img/icon-arrow-square.svg" alt="arrow"></div>
+    </div>
+
+    <button class="reviews__btn btn">Залишити коментар</button>
+</section>
+<section class="promotions" id="promotions" style="background-image: url('assets/img/bg-logo-transparent.svg')">
+    <div class="lines-divider"></div>
+    <p class="promotions__supheading">Акції</p>
+    <h2 class="promotions__heading">Смакуй бiльше!</h2>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <a href="#" class="promotions__img-container">
+                    <img src="assets/img/promotions-1.png" alt="promotions">
+                </a>
+                <a href="#" class="promotions__info">Запроси друга та отримай<br> 70% знижки до замовлення</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="promotions__img-container">
+                    <img src="assets/img/promotions-2.png" alt="promotions">
+                    <div class="badge"><span>-30%</span></div>
+                </a>
+                <a href="#" class="promotions__info">Щоб Ви змогли насолодитись новим смаком попкорну з шоколадом ми  зробили його на 30% дешевшим.</a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="promotions__img-container">
+                    <img src="assets/img/promotions-2.png" alt="promotions">
+                    <div class="badge"><span>-30%</span></div>
+                </a>
+                <a href="#" class="promotions__info">Щоб Ви змогли насолодитись новим смаком попкорну з шоколадом ми  зробили його на 30% дешевшим.</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-us" id="about-us" style="background-image: url('assets/img/about-us.jpg')">
+    <img class="about-us__arc" src="assets/img/about-us-arс.svg" alt="arc">
+    <h2 class="about-us__heading">Про Нас</h2>
+    <div class="logo-divider">
+        <img src="assets/img/logo.svg" alt="logo" width="48" height="48">
+    </div>
+    <!-- inner-->
+    <div class="about-us__inner">
+        <div class="flag-blocks">
+            <div class="flag-block">
+                <p class="flag-block__heading"><span>Не тiльки бiзнес, але й хоббi</span></p>
+                <p class="flag-block__text">Наша компанія спеціалізується на виробництві високоякісного готового попкорну, асортимент смаків якого зможе задовільнити вподобання будь-якого гурмана. Для нас це не тільки бізнес, але й хоббі, улюблене заняття, в якому нам подобається проявляти творчість та дивувати покупця. Нас турбує, що він подумає про нашу продукцію, тому постійне вдосконалення технологій і контроль якості – для нас звичне явище.</p>
+            </div>
+            <div class="flag-block">
+                <p class="flag-block__heading"><span>Найкраща Ціна В Україні</span></p>
+                <p class="flag-block__text">Наша головна особливість – пропозиція найкращого на ринку України співвідношення «ціна-якість» для готового попкорну, а також найбільшого асортименту смаків. Ми любимо те, чим займаємось, та з повагою відносимось до нашого покупця, тому висока якість продукції та її адекватна ціна – наші головні пріоритети.</p>
+            </div>
+        </div>
+        <div class="take-if">
+            <p class="take-if__heading">Беріть ПОПкорн, якщо Ви</p>
+            <div class="take-if__inner">
+                <p class="take-if__block">бажаєте купити попкорн для себе чи у подарунок, гарно провести час за переглядом фільму у веселій компанії;</p>
+                <p class="take-if__block">займаєтеся сезонною/виїзною торгівлею (свята, фестивалі, концерти, ярмарки);</p>
+                <p class="take-if__block">компанія з організації дитячих та інших видів свят.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end inner-->
+    <img class="about-us__arc about-us__arc--last" src="assets/img/about-us-arс-last.svg" alt="arc">
+</section>
+<section class="benefits" id="benefits">
+    <h2 class="benefits__heading">Переваги</h2>
+    <div class="logo-divider">
+        <img src="assets/img/logo-black.svg" alt="logo" width="23" height="20">
+    </div>
+    <div class="benefits__inner">
+        <div class="benefit benefit--small">
+            <img class="benefit__icon" src="assets/img/benefit-1.svg" alt="benefit">
+            <p class="benefit__text">Доступна ціна</p>
+        </div>
+        <div class="benefit benefit--small">
+            <img class="benefit__icon" src="assets/img/benefit-2.svg" alt="benefit">
+            <p class="benefit__text">Зручні способи<br> оплати</p>
+        </div>
+        <div class="benefit">
+            <img class="benefit__icon" src="assets/img/benefit-3.svg" alt="benefit">
+            <p class="benefit__text">Гарантія<br> Задоволення Якістю</p>
+        </div>
+        <div class="benefit">
+            <img class="benefit__icon" src="assets/img/benefit-4.svg" alt="benefit">
+            <p class="benefit__text">Широкий Асортимент<br> Смаків Попкорну</p>
+        </div>
+        <div class="benefit">
+            <img class="benefit__icon" src="assets/img/benefit-5.svg" alt="benefit">
+            <p class="benefit__text">Високоякісні<br> Складники</p>
+        </div>
+        <div class="benefit">
+            <img class="benefit__icon" src="assets/img/benefit-6.svg" alt="benefit">
+            <p class="benefit__text">Безкоштовна<br> Доставка По Україні</p>
+        </div>
+        <div class="benefit">
+            <img class="benefit__icon" src="assets/img/benefit-7.svg" alt="benefit">
+            <p class="benefit__text">Розробка<br> нових смаків</p>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="container">
+        <h2 class="faq__heading">Найпопулярнiшi питання</h2>
+        <div class="logo-divider">
+            <img src="assets/img/logo-black.svg" alt="logo" width="23" height="20">
+        </div>
+        <section class="accordion__container">
+            <div class="accordion__block">
+                <input id="accordion-1" type="checkbox" />
+                <label for="accordion-1">Як здійснюється доставка?</label>
+                <article class="accordion accordion--small">
+                    <p>Доставка здійснюється НОВОЮ ПОШТОЮ згідно тарифів перевізника. Доставка по Львову кур’єром – безкоштовна при покупці від 200 грн.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-2" type="checkbox" />
+                <label for="accordion-2">Як здійснюється<br> оплата?</label>
+                <article class="accordion accordion--medium">
+                    <p>Відправляємо накладним платежем або можна оплатити на банківську картку.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-3" type="checkbox" />
+                <label for="accordion-3">Чи є у вас знижка на<br> доставку?</label>
+                <article class="accordion accordion--large">
+                    <p>Так, при покупці від 500 грн доставка безкоштовна.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-4" type="checkbox" />
+                <label for="accordion-4">З якого міста здійснюється<br> відправка?</label>
+                <article class="accordion accordion--small">
+                    <p>Відправка здійснюється з міста Львів.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-5" type="checkbox" />
+                <label for="accordion-5">Попкорн потрібно<br> готувати?</label>
+                <article class="accordion accordion--small">
+                    <p>Відправляємо вже готовий та свіжий попкорн з обраними вами смаками.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-6" type="checkbox" />
+                <label for="accordion-6">Яке мінімальне<br> замовлення?</label>
+                <article class="accordion accordion--small">
+                    <p>Мінімальне замовлення – 60 грн.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-7" type="checkbox" />
+                <label for="accordion-7">Чи є у вас оптові ціни?</label>
+                <article class="accordion accordion--small">
+                    <p>Так, при замовлені від 1000 грн у нас діє знижка 20%.</p>
+                </article>
+            </div>
+            <div class="accordion__block">
+                <input id="accordion-8" type="checkbox" />
+                <label for="accordion-8">Коли готується попкорн?</label>
+                <article class="accordion accordion--small">
+                    <p>Попкорн готується в день відправки і запаковується в герметичні пакети. Строк придатності такого пакету – 4 місяці.</p>
+                </article>
+            </div>
+        </section>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="logo-container">
+            <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+            <!-- copyright -->
+            <div class="copyright">
+                <p>© Всі права захищені, 2020</p>
+            </div>
+            <!-- end copyright -->
+        </div>
+
+        <!-- lists -->
+        <div class="footer__lists">
+            <ul class="category__list">
+                <li class="category__item"><a href="#">Покорн зі смаком бекону</a></li>
+                <li class="category__item"><a href="#">Зі смаком карамелі</a></li>
+                <li class="category__item"><a href="#">Зі смаком шоколаду</a></li>
+                <li class="category__item"><a href="#">Зі смаком карамелі</a></li>
+                <li class="category__item"><a href="#">Зі смаком шоколаду</a></li>
+                <li class="category__item"><a href="#">Зі смаком карамелі</a></li>
+                <li class="category__item"><a href="#">Зі смаком шоколаду</a></li>
+            </ul>
+
+            <nav class="nav-bar" id="footer-nav">
+                <ul class="nav-bar__list">
+                    <li class="nav-bar__item"><a href="#assortment">Асортимент</a></li>
+                    <li class="nav-bar__item"><a href="#benefits">Переваги</a></li>
+                    <li class="nav-bar__item"><a href="#reviews">Відгуки</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- end lists -->
+
+        <!-- contact-blocks -->
+        <div class="footer__contacts">
+            <div class="contact-block contact-block--address">
+                <div class="contact-block__icon">
+                    <img src="assets/img/icon-map-pointer-white.svg" alt="tel icon">
+                </div>
+                <p>м. Київ, вул. Богдана<br>Хмельницького 2А</p>
+            </div>
+
+            <div class="contact-block contact-block--tel">
+                <div class="contact-block__icon">
+                    <img src="assets/img/icon-tel-white.svg" alt="tel icon">
+                </div>
+                <div class="contact-block__list">
+                    <a class="contact-block__item" href="tel:380971170899">+ 38 (097) 117 08 99</a>
+                    <a class="contact-block__item" href="tel:380631757254">+ 38 (063) 175 72 54</a>
+                </div>
+            </div>
+
+            <div class="contact-block contact-block--mail">
+                <div class="contact-block__icon">
+                    <img src="assets/img/icon-mail-white.svg" alt="tel icon">
+                </div>
+                <div class="contact-block__list">
+                    <a class="contact-block__item" href="mailto:svitpopcornu@gmail.com">svitpopcornu@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <!-- end contact-block -->
+
+        <!-- copyright -->
+        <div class="copyright">
+            <p>© Всі права захищені, 2020</p>
+        </div>
+        <!-- end copyright -->
+    </div>
+</footer>
+
+<!-- to top button -->
+<button id="scrollToTopBtn" class="scrollToTopBtn"><img src="assets/img/icon-arrow.svg" alt="arrow"></button>
+
+<!-- body__overlay -->
+<div class="body__overlay"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="assets/js/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/flexslider/jquery.flexslider-min.js"></script>
+<script src="assets/js/fancybox/jquery.fancybox.min.js"></script>
+<script src="assets/js/app.js"></script>
+<noscript><p class="enable-js">Please <a href="https://enable-javascript.com/" target="_blank">enable javascript </a> for full functionality</p></noscript><!-- if js is disabled -->
+</body>
+</html>

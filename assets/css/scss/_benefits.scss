@@ -1,0 +1,145 @@
+.benefits {
+  position: relative;
+  padding: 50px 10px 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    background: $color-grey-gold;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 40;
+  }
+
+  &__heading {
+    margin: 0 0 12px;
+    color: $color-brown-1;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 255px;
+  min-height: 147px;
+  padding: 9px 15px 27px;
+  margin-bottom: 17px;
+  background: $color-white;
+  border-radius: $border-radius-base;
+  text-align: center;
+
+  &__icon {
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $font-size-accordion;
+    font-weight: 500;
+    line-height: 1.63;
+    color: rgba(95, 88, 88, 0.8);
+  }
+
+  &--small {
+    padding: 17px 15px 29px;
+
+    .benefit__icon {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+
+@media all and (min-width: $tablet-x-small-width) {
+
+  .benefits{
+    padding: 10px 0 40px;
+
+    &__inner {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .benefit {
+    margin: 17px;
+  }
+
+}
+
+@media all and (min-width: $tablet-big-width) {
+
+  .benefits {
+    padding: 10px 0 60px;
+
+    &__arc {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .benefit {
+    &__small{
+      padding: 17px 15px 27px;
+    }
+
+    &:nth-child(5n + 1) {
+      margin-left: calc(50% - 272px);
+    }
+
+    &:nth-child(5n + 2) {
+      margin-right: calc(50% - 272px);
+    }
+  }
+}
+
+@media all and (min-width: $desktop-width) {
+
+  .benefits {
+    padding: 10px 0 124px;
+
+    &__heading {
+      margin: 0 0 11px;
+    }
+
+    &__inner{
+      padding-top: 90px;
+    }
+  }
+
+  .benefit {
+    margin: 0 25px 45px;
+
+    &:nth-child(5n + 1) {
+      margin-left: calc(50% - 286px);
+      margin-right: 30px;
+    }
+
+    &:nth-child(5n + 2) {
+      margin-right: calc(50% - 286px);
+      margin-left: 30px;
+    }
+  }
+}

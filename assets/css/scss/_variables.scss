@@ -1,0 +1,73 @@
+/*Fonts*/
+$font-base: 'Montserrat', sans-serif;
+$font-heading: 'Bodoni Cyrillic', arial;
+$font-decorative-1: 'Lobster', cursive;
+$font-decorative-2: 'AnastasiaScript', arial;
+$font-decorative-3: 'Calligraph', arial;
+$font-product-name: 'El Messiri', sans-serif;
+$font-badge-new: 'Balsamiq Sans', cursive;
+$font-size-h1: 24px;
+$font-size-h2: 32px;
+$font-size-big: 20px;
+$font-size-accordion: 18px;
+$font-size-medium: 16px;
+$font-size-base: 14px;
+$font-size-small: 12px;
+$line-height-base: 17px;
+$line-height-big: 1.35;
+
+/*Colors*/
+$color-black: #000;
+$color-dark: #111;
+$color-black-grey: #434343;
+$color-khaki-light: #797468;
+$color-brown-1: #676256;
+$color-bark-grey-brown: #3D3939;
+$color-white: #fff;
+$color-grey-white: #FFFEFB;
+$color-creamy: #EDE4D0;
+$color-dark-grey: #8A8A8A;
+$color-grey: #C4C4C4;
+$color-grey-gold: #C3A463;
+$color-dark-gold: #8C7035;
+$color-orange: #FFB400;
+
+/*Transitions*/
+$transition-base: all 0.35s ease;
+$transition-fast: all 0.2s ease;
+
+/*Filters*/
+/*link - https://codepen.io/sosuke/pen/Pjoqqp*/
+$filter-black: brightness(0) saturate(100%);
+$filter-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(180deg) brightness(108%) contrast(101%);
+$filter-grey: brightness(0) saturate(100%) invert(76%) sepia(40%) saturate(0%) hue-rotate(269deg) brightness(95%) contrast(96%);
+$filter-orange: brightness(0) saturate(100%) invert(77%) sepia(39%) saturate(4760%) hue-rotate(1deg) brightness(105%) contrast(103%);
+$filter-grey-gold: brightness(0) saturate(100%) invert(67%) sepia(54%) saturate(329%) hue-rotate(3deg) brightness(90%) contrast(87%);
+$filter-dark-gold: brightness(0) saturate(100%) invert(47%) sepia(34%) saturate(761%) hue-rotate(3deg) brightness(86%) contrast(81%);
+
+/*media queries*/
+$mobile-medium-width: 360px;
+$mobile-iphone-x-width: 375px;
+$mobile-big-width: 440px;
+$tablet-x-small-width: 600px;
+$tablet-small-width: 700px;
+$tablet-width: 768px;
+$tablet-big-width: 900px;
+$desktop-width: 1024px;
+$desktop-medium-width: 1200px;
+$desktop-big-width: 1400px;
+$desktop-bigger-width: 1600px;
+$desktop-full-hd-width: 1920px;
+
+/*shadows*/
+$shadow-base: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+/*border-radius*/
+$border-radius-base: 20px;
+$border-radius-secondary: 15px;
+
+/*mixins*/
+@mixin bg-base {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

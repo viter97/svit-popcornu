@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Bodoni Cyrillic";
+    src: url("bodoni-cyrillic.eot"); /* IE9 Compat Modes */
+    src: url("bodoni-cyrillic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("bodoni-cyrillic.otf") format("opentype"), /* Open Type Font */
+    url("bodoni-cyrillic.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("bodoni-cyrillic.woff") format("woff"), /* Modern Browsers */
+    url("bodoni-cyrillic.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AnastasiaScript';
+    src: local('AnastasiaScript.ttf'), local('Anastasia Script.ttf'),
+    url('AnastasiaScript.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calligraph';
+    src: local('calligraph.ttf'), local('Calligraph.ttf'),
+    url("calligraph.woff") format("woff"), /* Modern Browsers */
+    url('calligraph.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+

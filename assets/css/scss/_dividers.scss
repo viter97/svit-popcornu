@@ -1,0 +1,68 @@
+.logo-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    width: 24px;
+    margin: 7px;
+    background: $color-dark-gold;
+  }
+}
+
+.lines-divider {
+  position: relative;
+  max-width: 728px;
+  width: 100%;
+  margin: auto;
+  height: 14px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 462px;
+    height: 2px;
+    background: $color-grey-gold;
+  }
+
+  &::before{
+    top: 0;
+    right: 89px;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 89px;
+  }
+}
+
+@media all and (min-width: $mobile-big-width){
+  .lines-divider {
+    &::before{
+      right: 140px;
+    }
+
+    &::after {
+      left: 140px;
+    }
+  }
+}
+
+@media all and (min-width: $tablet-x-small-width){
+  .lines-divider {
+    &::before{
+      right: auto;
+      left: 0;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+  }
+}

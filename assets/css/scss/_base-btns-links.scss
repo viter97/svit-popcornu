@@ -1,0 +1,133 @@
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+.btn {
+  cursor: pointer;
+  transition: $transition-fast;
+  color: $color-black;
+
+  img {
+    transition: $transition-fast;
+  }
+}
+
+.shopping-cart-icon {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  &__count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px 2px;
+    margin-left: 10px;
+    font-size: $font-size-small;
+    background: $color-grey-gold;
+    border-radius: 50px;
+  }
+
+  img {
+    margin-top: 3px;
+  }
+
+  &:hover,
+  &:active {
+    img {
+      filter: $filter-grey-gold;
+    }
+  }
+
+  @media all and (min-width: $desktop-width) {
+    color: $color-white;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 18px 14px;
+  border: none;
+  font-family: $font-base;
+  font-size: $font-size-base;
+  line-height: $line-height-big;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $color-white;
+  background: $color-grey-gold;
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    background: $color-dark-gold;
+  }
+
+  &--submit {
+    width: 100%;
+    max-width: 334px;
+    padding: 16px 30px;
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: $font-size-small;
+    background: $color-khaki-light;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+
+  @media all and (min-width: $mobile-medium-width) {
+    padding: 15px 28px 14px;
+    font-size: $font-size-big;
+
+    &--submit {
+      padding: 16px 30px;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: $transition-base;
+  background: $color-grey-gold;
+
+  &--show {
+    opacity: 1;
+    transform: translateY(0)
+  }
+
+  &:hover,
+  &:active {
+    background: $color-dark-gold;
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    display: block;
+    width: 12px;
+  }
+}
